@@ -1,3 +1,15 @@
+GIT
+  remote: git://github.com/heroku/rails3_serve_static_assets.git
+  revision: 84910ceb4ca2851d650e66d3b22f5008acf253f8
+  specs:
+    rails3_serve_static_assets (0.0.1)
+
+GIT
+  remote: git://github.com/heroku/rails_log_stdout.git
+  revision: f9a92758f2d5dca5a88bf899a83256302f16ab6c
+  specs:
+    rails_log_stdout (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -80,7 +92,6 @@ GEM
     nokogiri (1.6.8-x86-mingw32)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
-    pg (0.18.4-x86-mingw32)
     pkg-config (1.1.7)
     puma (3.4.0)
     rack (2.0.1)
@@ -161,9 +172,10 @@ DEPENDENCIES
   jbuilder (= 2.4.1)
   jquery-rails (= 4.1.1)
   listen (= 3.0.8)
-  pg (= 0.18.4)
   puma (= 3.4.0)
   rails (= 5.0.0.1)
+  rails3_serve_static_assets!
+  rails_log_stdout!
   sass-rails (= 5.0.6)
   spring (= 1.7.2)
   spring-watcher-listen (= 2.0.0)
