@@ -1,0 +1,537 @@
+@import "bootstrap";
+$maroon: #422121;
+$light-grey: #B3B3B3;
+
+@mixin background_image($bottom_color,$top_color) {
+    background-image: linear-gradient( bottom, $bottom_color, $top_color 50%);
+  background-image: -o-linear-gradient( bottom, $bottom_color, $top_color 50%);
+  background-image: -moz-linear-gradient( bottom, $bottom_color, $top_color 50%);
+  background-image: -webkit-linear-gradient( bottom, $bottom_color, $top_color 50%);
+  background-image: -ms-linear-gradient( bottom, $bottom_color, $top_color 50%);
+  background-image: -webkit-gradient( linear, bottom, left top, color-stop(0, $bottom_color), color-stop(1, $top_color));
+}
+
+@mixin filter-gradient($outside_color, $middle_color) {
+  background: -moz-linear-gradient(top, $outside-color 0%, $middle-color 50%, $outside-color 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$outside-color), color-stop(50%,$middle-color), color-stop(100%,$outside-color)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $outside-color 0%,$middle-color 50%,$outside-color 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $outside-color 0%,$middle-color 50%,$outside-color 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $outside-color 0%,$middle-color 50%,$outside-color 100%); /* IE10+ */
+  background: linear-gradient(to bottom, $outside-color 0%,$middle-color 50%,$outside-color 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$outside-color', endColorstr='$middle-color',GradientType=0 ); /* IE6-9 */
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: #743A3A;
+  &:hover {}
+}
+a:hover {
+  color: darken(#743A3A, 10%);
+  background-color: none;
+  text-decoration: underline
+}
+.active a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.center {
+  text-align: center;
+}
+.underline {
+  text-decoration: underline;
+}
+
+.field_with_errors {
+  background-color: white;
+  color: red;
+}
+
+#flash_alert, #flash_notice, #flash_success, #flash_error {
+  text-align: center;
+  padding: 2px;
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}
+
+.form-layout{
+  background-color: white;
+  padding: 5% 10%;
+  label, input {
+  }
+  input {
+    margin-top: -3%;
+    margin-bottom: 5%;
+  }
+  input[type="submit"] {
+    margin-bottom: -3%;
+    margin-top: 2%;
+  }
+  #user_remember_me {
+    margin-bottom: -1%;
+  }
+}
+
+body {  
+  min-height: 800px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 1%;
+@include filter-gradient($outside_color: #666666, $middle_color: lighten(#666666, 50%));
+  background-repeat: repeat;
+  color: #422121;
+}
+
+.container {
+  background-color: lighten (#666666, 50%);
+  background-image: none;
+   background-size: cover;
+}
+.main-container {
+  border-radius: 10px;
+  background-color: whitesmoke;
+  margin: 5% 0 2% 0;
+  border: 1px solid #422121;
+  min-height: 500px;
+}
+
+#main-image{
+  h1 {
+    position: relative;
+    height: 200px;
+    width: 100%;   
+    overflow: hidden;
+    margin: auto;
+    span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(updated_banner.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.span7 {
+  .alert {
+    border: none;
+    background-color: white;
+    color: white;
+  }
+}
+
+.form-layout {
+  padding: 5%;
+  border: 1px solid $maroon;
+  background-color:  white;
+  border-radius: 10px;
+  h3 {
+    color: $maroon;
+    text-align: center;
+  }
+  input[type="submit"] {
+    padding: 1%;
+  }
+  i {
+    float: right;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+.underline {
+  text-decoration: underline;
+}
+
+.calendar-event{
+    color: $maroon;
+  margin: 8% 0;
+  padding: 5%;
+  border: 1px solid $maroon;
+  background-color: $light-grey;
+}
+#login {
+  margin-right: 30%;
+  float: right;
+  color: #422121;
+  i {
+    margin: 3px 0 0 3px;
+  }
+  form {
+    position: absolute;
+    background: whitesmoke;
+    z-index: 1;
+    padding: 1%;
+    display: none;
+  }
+  .btn {
+      background: none $maroon;
+      color: whitesmoke;
+      text-shadow: none;
+      padding: 2px;
+      &:hover {
+        background: lighten($maroon, 10%)
+      }
+    }
+
+  #topline-link{
+    padding-right: 15px;
+    font-size: 15px;
+    margin-right: 17px;
+  }
+   a#topline-link {
+      color: lighten(pink, 10%);
+    }
+  label {
+    margin-bottom: -20px;
+  }
+  label.label_remember_me {margin-bottom: -10px}
+  input[type="submit"] {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 1%;
+  }
+  div {
+    cursor: auto;
+    padding: 0 14px;
+  }
+}
+#logged-in-user {
+  margin-right: 15%;
+  float: right;
+  color: whitesmoke;
+  a { color: pink}
+}
+#hidden{
+  display: none;
+}
+
+#side-bar {
+  background-color: whitesmoke;
+  margin-top: 5%;
+  border: 1px solid #422121;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 1em;
+  h3 {
+    color: #422121;
+    line-height: 30px;
+    margin: 1em 0 -.2em;
+  }
+  p {
+    font-size: 1em;
+  }
+  .name_link {
+    font-weight: bold;
+    font-style: italic;
+  }
+  .upcoming-events {
+    padding: 1px 8px 8px;
+    text-align: center;
+    .agenda {
+      margin-top: 2px;
+    }
+  }
+}
+
+footer {
+  position: relative;
+  top: 25px;
+  text-align: center;
+  border-top: 1px solid darken(whitesmoke, 10%);
+  color: whitesmoke;
+  h5 {
+    text-align: center;
+    line-height: 1px;
+  }
+  p {
+    text-align: center;
+  }
+  #developer {
+    padding-top: 12px;
+  }
+  a {
+    color: darken(whitesmoke, 10%);
+  }
+}
+
+.update_show, .update_index{
+  background: white;
+  padding: 2%;
+  border-radius: 10px;
+}
+.update_show {
+  h3, h5 {
+    margin: 0;
+    line-height: 1;
+  }
+  p {
+    margin: 10px 0;
+  }
+}
+
+
+.document-index {
+  padding: 2%;
+  p { padding-left: 1em}
+  .span12 {
+    p:last-child {
+      margin-bottom: 1em;
+    }
+  }
+  h4 { margin-bottom: 0}
+  .link_to_archives {
+    text-decoration: underline;
+    padding-left: 1em;
+    color: darken(#743A3A, 10%);
+  }
+}
+
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+.title {
+  h2 {
+    margin-top: -3%;
+  }
+  h3 {
+    margin-top: -3%;
+  }
+}
+
+
+#home{
+  .span4 {
+    padding: .5%;
+    background-color: light-grey;
+  }
+}
+.location, .contact-us, .board, .issues-concerns{
+  text-align: center;
+  min-height: 265px;
+  background-color: whitesmoke ;
+  padding: 2%;
+  border-radius:10px;
+  min-height: 500px;
+}
+
+.contact-us {
+  color: $maroon;
+  min-height: 400px;
+  li {
+    list-style: none;
+    width: 100%;
+    height: 40px;
+  }
+  label, input {
+    float: left;
+  }
+  label {
+    width: 10%;
+    float: left;
+    text-align: right;
+  }
+  input {
+    margin-left: 2%;
+  }
+  #contact_us_contact_message{
+    width: 84%;
+    height: 400%;
+  }
+  .commit {
+  clear: both;
+    position: relative;
+    text-align: center;
+    top: 150px;
+    input {
+      float: none;
+    }
+    .btn {
+      background: none $maroon;
+      color: whitesmoke;
+      text-shadow: none;
+      padding: 2px;
+    }
+          &:hover {
+        background: lighten($maroon, 10%)
+      }
+  }
+}
+
+.location {
+  height: 400px;
+  .span6 {
+    overflow: hidden;
+  }
+  #address {
+    margin-top: 10%;
+    p {
+      font-size: 20px;
+      color: $maroon;
+      margin-top: 1%;
+    }
+  }
+}
+
+#flash_notice {
+  position: absolute;
+  top: 0;
+  width: 250px;
+}
+.updates-homepage {
+  background-color: white ;
+  border: 5px dashed red;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px  #422121;
+  color: black;
+  h3 {
+    margin: 0;
+    background-color: red;
+    color: yellow;
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+  h4{
+    margin: 10px 0 0;
+    text-align: center;
+  }
+  p {
+    padding: 0 2% 1%;
+    font-size: 16px;
+    a.update_link{
+      color: red ;
+    }
+    a.update_link:hover {
+      background-color: none;
+    }
+  }
+}
+.hero-unit {
+  text-align: left;
+  background-color: white ;
+  padding: 2% ;
+  border: 1px solid $maroon;
+  border-radius:10px;
+  line-height: 20px;
+  margin-bottom: 0px ;
+  min-height: 400px;
+  .btn-primary {
+    background-color: #422121;
+    background-image: none;
+    background-repeat: repeat-x;
+    border: 6px outset #B3B3B3 ;
+    box-shadow: 4px 4px 4px black;
+    color: #B3B3B3 ;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
+  .btn-primary:hover{
+    background-color: $light-grey;
+    color: $maroon ;
+    border: 6px inset #B3B3B3 ;
+  }
+  p {
+    padding: 0 1%;
+  }
+}
+
+.board{
+  text-align: left;
+  padding-left: 2%;
+  padding-bottom: 2%;
+  h3 {
+    color: $maroon;
+  }
+  h4 {
+    margin: 12px 0 0;
+  }
+  p {
+    line-height: 14px;
+  }
+}
+
+.issues-concerns {
+  padding: 0 5% 5%;
+  text-align: justify;
+  h3{
+    margin-bottom: 5%;
+    color: $maroon;
+  }
+
+}
+.forget-password, .register-user {
+  text-align: left;
+  min-height: 265px;
+    background-color: white ;
+    margin: 2%;
+    padding: 2%;
+    border: 1px solid $maroon;
+    border-radius:10px;
+    label {
+      margin-bottom: -10px;
+    }
+}
+
+.meeting_index {
+  padding: 2%;
+  h3 { color: #422121}
+  li { margin: .5em 0
+    a { color: #311F1F}
+  }
+}

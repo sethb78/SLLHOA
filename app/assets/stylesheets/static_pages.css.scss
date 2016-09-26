@@ -1,0 +1,173 @@
+@import 'universal_css';
+
+
+.title {
+	h2 {
+		margin-top: -3%;
+	}
+	h3 {
+		margin-top: -3%;
+	}
+}
+
+
+#home{
+	.span4 {
+		padding: .5%;
+		background-color: light-grey;
+	}
+}
+.location, .contact-us, .board, .issues-concerns{
+	text-align: center;
+	min-height: 265px;
+  background-color: white !important;
+  padding: 2%;
+  border: 1px solid $maroon;
+  border-radius:6px;
+  min-height: 500px;
+}
+
+.contact-us {
+	color: $maroon;
+  min-height: 400px;
+	li {
+		list-style: none;
+		width: 100%;
+		height: 40px;
+	}
+	label, input {
+		float: left;
+	}
+	label {
+		width: 10%;
+		float: left;
+		text-align: right;
+	}
+	input {
+		margin-left: 2%;
+	}
+	#contact_us_contact_message{
+		width: 84%;
+		height: 400%;
+	}
+	.commit {
+ 	clear: both;
+    position: relative;
+    text-align: center;
+    top: 150px;
+    left: 380px
+    }
+}
+
+.location {
+	height: 400px;
+	.span6 {
+  	overflow: hidden;
+	}
+	#address {
+		margin-top: 10%;
+		p {
+			font-size: 20px;
+			color: $maroon;
+			margin-top: 1%;
+    }
+	}
+}
+
+#flash_notice {
+  position: absolute;
+  top: 0;
+  width: 250px;
+}
+.updates-homepage {
+  background-color: white !important;
+  border: 5px dashed red;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px  #422121;
+  color: black;
+  h3 {
+    margin: 0;
+    background-color: red;
+    color: yellow;
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+  h4{
+    margin: 10px 0 0;
+    text-align: center;
+  }
+  p {
+    padding: 0 2% 1%;
+    font-size: 16px;
+    a.update_link{
+      color: red !important;
+    }
+    a.update_link:hover {
+      background-color: none;
+    }
+  }
+}
+.hero-unit {
+  text-align: left;
+  background-color: white !important;
+  padding: 2% !important;
+  border: 1px solid $maroon;
+  border-radius:10px;
+  line-height: 20px;
+  margin-bottom: 0px !important;
+  min-height: 400px;
+  .btn-primary {
+    background-color: #422121;
+    background-image: none;
+    background-repeat: repeat-x;
+    border: 6px outset #B3B3B3 !important;
+    box-shadow: 4px 4px 4px black;
+    color: #B3B3B3 !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	}
+	.btn-primary:hover{
+		background-color: $light-grey;
+		color: $maroon !important;
+    border: 6px inset #B3B3B3 !important;
+	}
+  p {
+    padding: 0 1%;
+  }
+}
+
+.board{
+	text-align: left;
+	padding-left: 2%;
+	padding-bottom: 2%;
+	h3 {
+		color: $maroon;
+	}
+	h4 {
+		margin: 12px 0 0;
+	}
+	p {
+		line-height: 14px;
+	}
+}
+
+.issues-concerns {
+	padding: 0 5% 5%;
+	text-align: justify;
+	h3{
+		margin-bottom: 5%;
+		color: $maroon;
+	}
+
+}
+.forget-password, .register-user {
+	text-align: left;
+	min-height: 265px;
+  	background-color: white !important;
+  	margin: 2%;
+  	padding: 2%;
+  	border: 1px solid $maroon;
+  	border-radius:10px;
+  	label {
+  		margin-bottom: -10px;
+  	}
+}

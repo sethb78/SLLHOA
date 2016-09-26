@@ -1,0 +1,43 @@
+@import 'universal_css';
+
+.document-index {
+	background-color: #B3B3B3;
+	border-radius: 6px;
+	min-height: 500px;
+	.span6 {
+		padding: .5%;
+		border-radius: 6px;
+	}
+	.span12 {  
+		background-color: $light-grey;
+		margin: 0;
+		padding: .5%;
+		margin-left: 0 !important;
+	}
+	h3 {
+		color: $maroon;
+		text-align: center
+	}
+	p {
+		border-radius:2px;
+	    background-color: lighten($light-grey, 10%);
+	    color: $maroon;
+	    font-size: 1.2em;
+	    margin-bottom: 5%;
+	    margin-left: 2%;
+	    margin-right: 2%;
+	    padding: 1%;
+	    box-shadow:  3px 3px 3px #4C4C4C
+	}
+	.minutes {
+		font-size: .9em;
+	}
+	a {
+		color: $maroon !important;
+	}
+	a:hover {
+		color: lighten($maroon, 10%) !important;
+		background-color: #cccccc !important;
+	}
+}
+

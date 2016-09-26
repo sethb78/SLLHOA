@@ -1,0 +1,54 @@
+<div class="user-index">
+	<h1 class="center">Users</h1>
+	<div class="center">
+		<%= link_to( "All Users", :action => "index", :id => "all-users")%>	|
+		<%= link_to "Users awaiting approval", :action => "index", :approved => "false" %>
+	</div>
+
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Unit</th>
+			<th>Email</th>
+			<th>Approval</th>
+			<th>Admin</th>
+			<th>Delete User</th>
+		</tr>
+		<% @users.each do |user| %>
+			<tr>
+				<td> <%= user.name %></td>
+				<td class="center unit"><%= user.unit %></td>
+				<td> <%= user.email %> </td>
+				<% if user.approved == false %>
+					<td class="links"> <%= link_to "approve", approve_user_path(user)%> </td>
+				<% else %>
+					<td></td>
+				<% end %>
+				<% if user.admin == false %>
+					<td class="links"> <%= link_to "make admin", make_admin_user_path(user)%> </td>
+				<% else %>
+					<td class="links"> <%= link_to "remove admin", make_admin_user_path(user)%> </td>
+				<% end %>
+				<td class="links"><%= link_to "delete", user, method: :delete, data: { confirm: "You sure, this will delete the user's entry?" } %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>
+
+<script>
+function highlight()
+{
+  var pageurl = location.href;
+  var dnl = document.getElementsByTagName("a");
+  for(i = 0; i < dnl.length;i++)
+  {
+    var x = dnl.item(i);
+    if(x.href == pageurl) 
+    {
+      x.style.fontWeight = "bold";
+      x.style.textDecoration = "underline";
+    }
+  }	
+}
+window.onload=highlight; 
+</script> 
